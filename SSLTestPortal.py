@@ -22,10 +22,10 @@ import socket
 application = Flask(__name__)
 
 ### Configuration ###
-logDir = "log"
-resultDirJSON = "result/json"
-resultDirHTML = "result/html"
-checkCmd = "testssl.sh/testssl.sh"
+logDir = "/etc/testssl/log"
+resultDirJSON = "/etc/testssl/result/json"
+resultDirHTML = "/etc/testssl/result/html"
+checkCmd = "/etc/testssl/testssl.sh/testssl.sh"
 checkArgs = ["--quiet", "--logfile=" + logDir, "--jsonfile=" + resultDirJSON]
 checkTimeout = 90
 rendererCmd = "aha"
