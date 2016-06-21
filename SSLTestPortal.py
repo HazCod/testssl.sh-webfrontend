@@ -111,7 +111,7 @@ def main():
             flash("SSL Scan timed out")
             check.terminate()
 
-        html = "<pre>" + str(output, 'utf-8') + "</pre>"
+        html = "<pre>" + str(err, 'utf-8') + "<br>" + str(output, 'utf-8') + "</pre>"
         try:
             renderer = Popen([rendererCmd], stdin=PIPE, stdout=PIPE, stderr=PIPE)
             html, err = renderer.communicate(input=output, timeout=rendererTimeout)
