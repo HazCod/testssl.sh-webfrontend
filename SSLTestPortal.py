@@ -111,7 +111,7 @@ def main():
             flash("SSL Scan timed out")
             check.terminate()
 
-        output = str(err,'utf-8') + "<br>" + output
+        output = err + output
         html = "<pre>" + str(output, 'utf-8') + "</pre>"
 
         try:
